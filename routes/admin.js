@@ -57,7 +57,7 @@ router.post(
   authenticateToken,
   authorizeRole(['admin']),
   [
-    body('name').isLength({ min: 20, max: 60 }),
+    body('name').isLength({ min: 2, max: 60 }),
     body('email').isEmail(),
     body('password')
       .isLength({ min: 8, max: 16 })
